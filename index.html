@@ -4,80 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zagaria Fabio - Portfolio</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
 </head>
 <body>
-    <header>
-        <h1 class="title">Zagaria Fabio - Portfolio</h1>
-        <nav class="nav">
-            <ul>
-                <li><a href="#about">Chi Sono</a></li>
-                <li><a href="#projects">Progetti</a></li>
-                <li><a href="#contact">Contatti</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>Chi Sono</h2>
-        <p> Piacere! :) Mi chiamo Fabio Zagaria. Si sto sito bruttino
-            l'ho fatto io. Non mi piace molto direi, ma non c'è da 
-            preoccuparsi. Sono qui apposta per imparare e migliorare sempre 
-            di piu. Studio ogni giorno. Faccio corsi online e tanti esercizi
-            pratici, perche la pratica è la cosa piu importante. Tanti progetti
-            in mente, tante idee da realizzare. Spero di riuscire a realizzarle ma ne
-            sono sicuro. Sono un ragazzo molto determinato e non mi arrendo mai. Come
-            noti qui sotto ci sono gia dei progetti che ho realizzato. Sono piccoli
-            ma buoni (?). Spero ti piacciano. Se hai bisogno di contattarmi, trovi i 
-            miei contatti alla fine della pagina. A presto! :)
-            P.S. Se hai qualche consiglio da darmi, sono tutto orecchi. Grazie! :)
-            P.S.2 Se hai bisogno di un programmatore, sono qui! :)
-            P.S.3 Ogni volta che scrivo un P.S. mi viene in mente il film "P.S. I love you"
-            P.S.4 Ok basta. Volevo dire che ogni volta che acquisisco nuovi linguaggi/framework
-            ovviamente cercherò di implementarli in questo sito e nei progetti possibilmente.
-        </p>
-    </section>
-
-    <section id="projects"> 
-        <h2>Progetti</h2>
-        <div class="project">
-            <h3>Il mio Sito Personale</h3>
-            <p>Sito Web incentrato su di me. Realizzato con <span>HTML</span> e <span>CSS</span></p>
-            <p><a href="https://github.com/JavaMetalCoder/Il-mio-Sito">GitHub</a></p>
-
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Fabio Zagaria</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">Chi Sono</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Progetti</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Servizi</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contatti</a></li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        <div class="project">
-            <h3>Mini Gestionale</h3>
-            <p>Piccolo Gestionale per aggiungere prodotti, rimuovere ecc. Realizzato con <span>Python</span></p>
-            <p><a href="https://github.com/JavaMetalCoder/mini-gestionale.git">GitHub</a></p>
+    <main class="container py-5">
+      <section id="about" class="mb-5">
+          <h2 class="text-center mb-4">Chi Sono</h2>
+          <div class="text-center">
+              <p><strong>Ciao! Sono Zagaria Fabio.</strong></p>
+              <p>Sviluppatore software principiante ma con una forte ambizione e una grande passione per la tecnologia, il coding e la creazione di progetti semplici ma efficaci.</p>
+              <p>Mi alleno ogni giorno con linguaggi e tecnologie legati al mondo web: ho una buona padronanza di <strong>HTML, CSS e Java</strong>, conosco le basi di <strong>JavaScript</strong> e <strong>Python</strong>. Attualmente sto iniziando a studiare <strong>React</strong> e <strong>Bootstrap</strong>.</p>
+              <p>Sono determinato a migliorarmi continuamente: credo che la costanza e la passione siano la vera chiave per crescere.</p>
+              <p>Qui sotto trovi alcuni dei progetti che ho già realizzato. Sono ancora semplici, ma prometto che cresceranno insieme a me.</p>
+              <p>Se hai bisogno di una mano per un progetto o anche solo di un confronto, <strong>scrivimi!</strong> Trovi tutti i contatti in fondo alla pagina 😊</p>
+          </div>
+      </section>
 
-        </div>
+      <section id="projects" class="mb-5">
+          <h2 class="text-center mb-4">Progetti</h2>
+          <div class="row justify-content-center">
+              <div class="col-md-5 col-lg-4 mb-4">
+                  <div class="card h-100 shadow-sm">
+                      <div class="card-body">
+                          <h5 class="card-title">Il mio Sito Personale</h5>
+                          <p class="card-text">Sito Web incentrato su di me. Realizzato con <span class="fw-bold text-success">HTML</span> e <span class="fw-bold text-success">CSS</span>.</p>
+                          <a href="https://github.com/JavaMetalCoder/Il-mio-Sito" class="btn btn-outline-primary" target="_blank">Guarda su GitHub</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-5 col-lg-4 mb-4">
+                  <div class="card h-100 shadow-sm">
+                      <div class="card-body">
+                          <h5 class="card-title">Mini Gestionale</h5>
+                          <p class="card-text">Piccolo gestionale per aggiungere, rimuovere e gestire prodotti. Realizzato con <span class="fw-bold text-success">Python</span>.</p>
+                          <a href="https://github.com/JavaMetalCoder/mini-gestionale.git" class="btn btn-outline-primary" target="_blank">Guarda su GitHub</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-        
-    </section>
+      <section id="services" class="mb-5">
+          <h2 class="text-center mb-4">Servizi</h2>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">🔧 Realizzazione siti web statici con HTML, CSS e JavaScript</li>
+              <li class="list-group-item">📊 Sviluppo mini gestionali e tool di automazione con Python</li>
+              <li class="list-group-item">🌐 Esperienza nella programmazione Java lato back-end</li>
+              <li class="list-group-item">🎨 Design responsive con attenzione alla semplicità e usabilità</li>
+              <li class="list-group-item">🚀 Integrazione futura con React e Bootstrap (in corso di apprendimento)</li>
+          </ul>
+      </section>
 
-    <section id="contact">
-        <h2>Contattami</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Il tuo nome" required>
-            <input type="email" name="email" placeholder="La tua email" required>
-            <textarea name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
-            <button type="submit">Invia</button>
-        </form>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com/fabio-zagaria" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/JavaMetalCoder" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        </div>
-    </section>
-    
+      <section id="contact" class="mb-5">
+          <h2 class="text-center mb-4">Contattami</h2>
+          <form action="https://formspree.io/f/xrbpqbzj" method="POST" class="mx-auto" style="max-width: 500px;">
+              <div class="mb-3">
+                  <input type="text" name="name" class="form-control" placeholder="Il tuo nome" required>
+              </div>
+              <div class="mb-3">
+                  <input type="email" name="email" class="form-control" placeholder="La tua email" required>
+              </div>
+              <div class="mb-3">
+                  <textarea name="message" rows="5" class="form-control" placeholder="Il tuo messaggio" required></textarea>
+              </div>
+              <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Invia</button>
+              </div>
+          </form>
+          <div class="d-flex justify-content-center gap-3 mt-4">
+              <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-2x text-primary"></i></a>
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter fa-2x text-info"></i></a>
+              <a href="https://linkedin.com/fabio-zagaria" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x text-primary"></i></a>
+              <a href="https://github.com/JavaMetalCoder" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-2x text-dark"></i></a>
+          </div>
+      </section>
+    </main>
 
-    <footer>
-        <p>&copy; 2025 Zagaria Fabio. Tutti i diritti riservati.</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Zagaria Fabio. Tutti i diritti riservati.</p>
     </footer>
+
+    <!-- Fade-in effect -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section");
+        const options = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in");
+            }
+          });
+        }, options);
+        sections.forEach(section => {
+          section.classList.add("fade-init");
+          observer.observe(section);
+        });
+      });
+    </script>
+    <style>
+      .fade-init {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .fade-in {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+    </style>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
