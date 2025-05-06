@@ -46,9 +46,9 @@ Questo sito è il mio biglietto da visita online, realizzato con HTML, CSS e Jav
 
 ## 📬 Contatti
 
-* **Email**: [fabio.zagaria@example.com](zagariafabio1999@gmail.com)
+* **Email**: zagariafabio1999@gmail.com
 * **GitHub**: [JavaMetalCoder](https://github.com/JavaMetalCoder)
-* **LinkedIn**: [fabio-zagaria](https://linkedin.com/in/fabio-zagaria)
+* **LinkedIn**: [fabio-zagaria](https://linkedin.com/in/metalcoder)
 
 ---
 
