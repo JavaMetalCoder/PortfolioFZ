@@ -37,12 +37,9 @@ Questo sito è il mio biglietto da visita online, realizzato con HTML, CSS e Jav
 2. **Apri** il file `index.html` nel tuo browser preferito.
 3. Se vuoi personalizzare i contenuti, modifica direttamente `index.html` e `styles.css`.
 
-## 🎨 Personalizzazione
+## 🎨 Futuri Aggiornamenti 
 
-* **Logo**: sostituisci `logo.png` e regola l’attributo `width`/`height` o le proprietà CSS in `styles.css`.
-* **Colori e font**: modifica le variabili CSS o le regole nel file `styles.css`.
-* **Progetti**: aggiungi/rimuovi schede nel blocco `#projects` in `index.html`.
-* **Contatti**: aggiorna l’azione del form o i link ai social nel blocco `#contact`.
+* **Upgrade**: il portfolio stesso sarà aggiornato completamente. Per il frontend sarà utilizzato React.js e il backend node.js ad esempio
 
 ## 📬 Contatti
 
