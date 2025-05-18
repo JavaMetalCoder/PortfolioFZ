@@ -121,6 +121,8 @@ nav.nav ul li a:hover {
 #about {
     margin-bottom: 40px;
     text-align: center;
+    line-height: 1.5rem;
+    
 }
 
 #about p {
