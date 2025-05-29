@@ -49,4 +49,4 @@ Questo sito è il mio biglietto da visita online, realizzato con HTML, CSS e Jav
 
 ---
 
-© 2025 Fabio Zagaria. Tutti i diritti riservati.
+© 2025 Fabio Zagaria aka MetalCoder. Tutti i diritti riservati. 
