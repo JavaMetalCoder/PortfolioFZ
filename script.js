@@ -276,7 +276,7 @@ class PortfolioAnimations {
     setupDynamicCodingDays() {
       // 🔥 DATA DI INIZIO DEL TUO PERCORSO CODING (modifica questa data!)
       // Formato: Anno, Mese (0-11), Giorno
-      const codingStartDate = new Date(2024, 11, 1); // 1 Gennaio 2023
+      const codingStartDate = new Date(2024, 11, 1); // 1 Dicembre 2024
       
       // Calcola i giorni trascorsi
       const today = new Date();
@@ -284,7 +284,6 @@ class PortfolioAnimations {
       const daysDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
       
       // Trova l'elemento dei giorni di coding (per label invece che per data-count)
-      const codingDaysElement = document.querySelector('.c-about__stat-label');
       let codingStatElement = null;
       
       // Trova la stat con label "Giorni di Coding"
@@ -466,30 +465,38 @@ class PortfolioAnimations {
     submitForm(form) {
       const submitButton = form.querySelector('button[type="submit"]');
       const originalText = submitButton.innerHTML;
-      
+
       // Show loading state
       submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Invio in corso...';
       submitButton.disabled = true;
-  
-      // Simulate form submission (replace with actual form handling)
-      setTimeout(() => {
-        // Reset form
-        form.reset();
-        
-        // Show success message
-        this.showNotification('Messaggio inviato con successo!', 'success');
-        
-        // Reset button
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          this.showNotification('Messaggio inviato con successo!', 'success');
+          const inputs = form.querySelectorAll('input, textarea');
+          inputs.forEach(input => {
+            input.parentElement.classList.remove('focused');
+            this.removeFieldError(input);
+          });
+        } else {
+          this.showNotification("Errore durante l'invio. Riprova.", 'info');
+        }
+      })
+      .catch(() => {
+        this.showNotification('Errore di connessione. Riprova.', 'info');
+      })
+      .finally(() => {
         submitButton.innerHTML = originalText;
         submitButton.disabled = false;
-        
-        // Reset form state
-        const inputs = form.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-          input.parentElement.classList.remove('focused');
-          this.removeFieldError(input);
-        });
-      }, 2000);
+      });
     }
   
     showNotification(message, type = 'info') {
