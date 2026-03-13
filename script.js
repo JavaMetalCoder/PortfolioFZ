@@ -159,8 +159,8 @@ class PortfolioAnimations {
       const phrases = [
         'Coding è vita.',
         'HTML, CSS, JavaScript',
-        'Java & Python lover',
-        'React in arrivo...',
+        'Java & JavaScript developer',
+        'Angular & TypeScript prossimamente...',
         'MetalCoder in azione!'
       ];
   
