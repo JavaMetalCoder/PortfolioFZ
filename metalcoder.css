@@ -949,6 +949,106 @@ button {
   color: var(--clr-cyber-green);
 }
 
+/* Timeline / Experience */
+.c-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.c-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.9375rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--clr-cyber-green), transparent);
+}
+
+.c-timeline__item {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.c-timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.c-timeline__marker {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: var(--radius-full);
+  background: var(--clr-black-soft);
+  border: 2px solid var(--clr-cyber-green);
+  box-shadow: var(--glow-sm);
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.c-timeline__card {
+  flex: 1;
+  background: var(--clr-black);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+}
+
+.c-timeline__card:hover {
+  border-color: var(--clr-cyber-green);
+  box-shadow: var(--glow-sm);
+  transform: translateX(4px);
+}
+
+.c-timeline__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.c-timeline__org {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-500);
+  color: var(--clr-cyber-green);
+  text-shadow: var(--glow-sm);
+}
+
+.c-timeline__badge {
+  font-size: var(--fs-300);
+  padding: 2px var(--space-sm);
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  color: var(--clr-white-faint);
+  background: var(--clr-cyber-green-subtle);
+}
+
+.c-timeline__badge--active {
+  border-color: var(--clr-cyber-green);
+  color: var(--clr-cyber-green);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.c-timeline__meta {
+  display: flex;
+  gap: var(--space-lg);
+  color: var(--clr-white-subtle);
+  font-size: var(--fs-300);
+  flex-wrap: wrap;
+}
+
+.c-timeline__meta i {
+  color: var(--clr-cyber-green);
+  margin-right: var(--space-xs);
+}
+
 /* Footer */
 .c-footer { 
   background: var(--clr-black); 
