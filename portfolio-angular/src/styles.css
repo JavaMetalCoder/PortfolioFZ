@@ -1,3 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
 /* =============================================================================
    METALCODER PORTFOLIO - FIXED & RESPONSIVE
    ============================================================================= */
@@ -315,41 +316,20 @@ button {
   width: 100%; 
 }
 
-.c-hero__title { 
-  font-family: var(--ff-primary); 
-  font-size: var(--fs-900); 
-  font-weight: var(--fw-black); 
-  line-height: 1; 
-  color: var(--clr-cyber-green); 
-  text-shadow: var(--glow-lg); 
-  margin-bottom: var(--space-md); 
-  position: relative; 
+.c-hero__logo-wrapper {
+  margin-bottom: var(--space-md);
+  display: inline-block;
 }
 
-.c-hero__title--glitch { 
-  animation: glitch-hero 3s infinite;
-}
-
-.c-hero__title--glitch::before, 
-.c-hero__title--glitch::after { 
-  content: attr(data-text); 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%;
-}
-
-.c-hero__title--glitch::before { 
-  animation: glitch-before 3s infinite; 
-  color: var(--clr-accent-red); 
-  z-index: -1;
-}
-
-.c-hero__title--glitch::after { 
-  animation: glitch-after 3s infinite; 
-  color: var(--clr-accent-blue); 
-  z-index: -2;
+.c-hero__logo-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--radius-full);
+  border: 4px solid var(--clr-cyber-green);
+  box-shadow: var(--glow-lg);
+  animation: hero-logo-float 4s ease-in-out infinite, hero-logo-glow 2s ease-in-out infinite alternate;
+  background-color: var(--clr-black);
 }
 
 .c-hero__subtitle { 
@@ -640,6 +620,53 @@ button {
   margin-top: var(--space-xs);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* Experience */
+.c-experience__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.c-experience__item {
+  background: var(--clr-black);
+  border: 1px solid var(--clr-cyber-green-subtle);
+  border-left: 4px solid var(--clr-cyber-green);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.c-experience__item:hover {
+  transform: translateX(10px);
+  border-color: var(--clr-cyber-green);
+  box-shadow: var(--glow-sm);
+}
+
+.c-experience__item h3 {
+  color: var(--clr-cyber-green);
+  font-size: var(--fs-600);
+  margin-bottom: var(--space-xs);
+}
+
+.c-experience__item h4 {
+  color: var(--clr-white);
+  font-size: var(--fs-500);
+  margin-bottom: var(--space-xs);
+}
+
+.c-experience__date {
+  color: var(--clr-cyber-green-dim);
+  font-size: var(--fs-300);
+  margin-bottom: var(--space-md);
+  font-family: var(--ff-mono);
+}
+
+.c-experience__item p {
+  color: var(--clr-white-subtle);
+  line-height: 1.6;
 }
 
 /* Projects */
@@ -1201,57 +1228,18 @@ button {
 }
 
 /* 6. ANIMATIONS */
-@keyframes glitch-hero { 
-  0%, 90%, 100% { 
-    transform: translate(0); 
-  }
-  20% { 
-    transform: translate(-2px, 2px); 
-  }
-  40% { 
-    transform: translate(-2px, -2px); 
-  }
-  60% { 
-    transform: translate(2px, 2px); 
-  }
-  80% { 
-    transform: translate(2px, -2px); 
-  }
+@keyframes hero-logo-float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
 }
 
-@keyframes glitch-before { 
-  0%, 90%, 100% { 
-    transform: translate(0); 
+@keyframes hero-logo-glow {
+  from {
+    box-shadow: 0 0 10px var(--clr-cyber-green), 0 0 20px var(--clr-cyber-green);
   }
-  20% { 
-    transform: translate(2px, -2px); 
-  }
-  40% { 
-    transform: translate(2px, 2px); 
-  }
-  60% { 
-    transform: translate(-2px, -2px); 
-  }
-  80% { 
-    transform: translate(-2px, 2px); 
-  }
-}
-
-@keyframes glitch-after { 
-  0%, 90%, 100% { 
-    transform: translate(0); 
-  }
-  20% { 
-    transform: translate(-2px, -2px); 
-  }
-  40% { 
-    transform: translate(-2px, 2px); 
-  }
-  60% { 
-    transform: translate(2px, 2px); 
-  }
-  80% { 
-    transform: translate(2px, -2px); 
+  to {
+    box-shadow: 0 0 20px var(--clr-cyber-green), 0 0 40px var(--clr-cyber-green), 0 0 60px var(--clr-cyber-green);
   }
 }
 

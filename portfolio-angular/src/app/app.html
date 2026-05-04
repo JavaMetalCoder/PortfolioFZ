@@ -1,0 +1,35 @@
+<!-- Navbar -->
+<nav class="c-nav" id="navbar" [class.scrolled]="isScrolled">
+  <div class="c-nav__container o-container">
+    <div class="c-nav__logo" routerLink="/">
+      <img src="app/img/logo.png" alt="MetalCoder Logo" class="c-nav__logo-img">
+      <span class="c-nav__logo-text">MetalCoder</span>
+    </div>
+    <ul class="c-nav__menu" [class.c-nav__menu--active]="isMenuOpen" id="nav-menu">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="c-nav__link" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" class="c-nav__link" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/experience" routerLinkActive="active" class="c-nav__link" (click)="closeMenu()">Experience</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active" class="c-nav__link" (click)="closeMenu()">Projects</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" class="c-nav__link" (click)="closeMenu()">Contact Me</a></li>
+    </ul>
+    <button class="c-nav__toggle" [class.c-nav__toggle--active]="isMenuOpen" (click)="toggleMenu()" aria-label="Menu">
+      <span class="c-nav__toggle-line"></span>
+      <span class="c-nav__toggle-line"></span>
+      <span class="c-nav__toggle-line"></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="c-footer">
+  <div class="o-container">
+    <div class="c-footer__content">
+      <div class="c-footer__text">
+        <p>&copy; 2026 Fabio Zagaria (MetalCoder). Powered by Angular.</p>
+      </div>
+    </div>
+  </div>
+</footer>

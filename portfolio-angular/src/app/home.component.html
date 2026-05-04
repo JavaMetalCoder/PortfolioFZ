@@ -1,0 +1,55 @@
+  <section id="home" class="c-hero o-section">
+    <div class="c-hero__bg">
+      <div class="c-hero__matrix"></div>
+      <div class="c-hero__grid"></div>
+    </div>
+    <div class="c-hero__content o-container">
+      <div class="c-hero__text">
+        <div class="c-hero__logo-wrapper">
+          <img src="app/img/logo.png" alt="Fabio Zagaria Logo" class="c-hero__logo-img">
+        </div>
+        <p class="c-hero__subtitle">METALCODER</p>
+        <p class="c-hero__description">
+          Software Developer in evoluzione.<br>
+          <span class="c-hero__typing">{{ currentPhrase }}<span class="cursor">_</span></span>
+        </p>
+        <div class="c-hero__actions">
+          <a routerLink="/projects" class="c-btn c-btn--primary">
+            <i class="fas fa-code"></i> View Projects
+          </a>
+          <a routerLink="/contact" class="c-btn c-btn--secondary">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+        </div>
+      </div>
+      <div class="c-hero__visual">
+        <div class="c-terminal">
+          <div class="c-terminal__header">
+            <div class="c-terminal__controls">
+              <span class="c-terminal__control c-terminal__control--close"></span>
+              <span class="c-terminal__control c-terminal__control--minimize"></span>
+              <span class="c-terminal__control c-terminal__control--maximize"></span>
+            </div>
+            <div class="c-terminal__title">metalcoder@portfolio:~$</div>
+          </div>
+          <div class="c-terminal__body">
+            <div class="c-terminal__line">
+              <span class="c-terminal__prompt">$</span>
+              <span class="c-terminal__command">ng serve --open</span>
+            </div>
+            <div class="c-terminal__output">
+              @for (skill of skills; track skill.name) {
+                <div class="c-terminal__skill">
+                  {{ skill.name }} 
+                  <span class="c-terminal__skill-bar">
+                    <span class="c-terminal__skill-fill" [style.width.%]="skill.level"></span>
+                  </span>
+                </div>
+              }
+            </div>
+            <div class="c-terminal__cursor">_</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

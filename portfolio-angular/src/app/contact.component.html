@@ -1,0 +1,42 @@
+  <section id="contact" class="c-contact o-section scroll-reveal" [class.revealed]="true">
+    <div class="c-contact__container o-container">
+      <h2 class="c-section-title">
+        <span class="c-section-title__number">04</span>CONTATTAMI
+      </h2>
+      <div class="c-contact__content">
+        <div class="c-contact__info">
+          <h3>Parliamone</h3>
+          <p>Hai un progetto in mente o vuoi collaborare?</p>
+          <div class="c-contact__details">
+            <div class="c-contact__item">
+              <i class="fas fa-envelope c-contact__item-icon"></i>
+              <span>zagariafabio1999@gmail.com</span>
+            </div>
+          </div>
+          <div class="c-contact__social">
+            <a href="https://github.com/JavaMetalCoder" target="_blank" class="c-contact__social-link"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/metalcoder" target="_blank" class="c-contact__social-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <form class="c-contact__form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="c-form-group">
+            <input type="text" name="name" id="name" class="c-form-control" placeholder=" " required [(ngModel)]="formData.name">
+            <label for="name" class="c-form-label">Nome</label>
+          </div>
+          <div class="c-form-group">
+            <input type="email" name="email" id="email" class="c-form-control" placeholder=" " required [(ngModel)]="formData.email">
+            <label for="email" class="c-form-label">Email</label>
+          </div>
+          <div class="c-form-group">
+            <textarea name="message" id="message" rows="5" class="c-form-control" placeholder=" " required [(ngModel)]="formData.message"></textarea>
+            <label for="message" class="c-form-label">Messaggio</label>
+          </div>
+          <button type="submit" class="c-btn c-btn--primary" [disabled]="!contactForm.valid || isSubmitting">
+            <i class="fas" [class.fa-paper-plane]="!isSubmitting" [class.fa-spinner]="isSubmitting" [class.fa-spin]="isSubmitting"></i>
+            {{ isSubmitting ? 'Invio in corso...' : 'Invia Messaggio' }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
