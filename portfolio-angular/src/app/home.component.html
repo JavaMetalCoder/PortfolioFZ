@@ -8,10 +8,10 @@
         <div class="c-hero__logo-wrapper">
           <img src="app/img/logo.png" alt="Fabio Zagaria Logo" class="c-hero__logo-img">
         </div>
-        <p class="c-hero__subtitle">METALCODER</p>
-        <p class="c-hero__description">
-          Software Developer in evoluzione.<br>
-          <span class="c-hero__typing">{{ currentPhrase }}<span class="cursor">_</span></span>
+        <p class="c-hero__subtitle" style="font-size: 2rem; margin-bottom: 0.5rem;">FABIO ZAGARIA</p>
+        <p class="c-hero__description" style="max-width: 600px; text-align: left; line-height: 1.6;">
+          <strong>Junior Full Stack Developer in formazione.</strong><br>
+          Studio sviluppo web con focus su Angular, Java, Spring Boot e MySQL. Costruisco progetti pratici per trasformare metodo, studio e disciplina in competenze professionali.
         </p>
         <div class="c-hero__actions">
           <a routerLink="/projects" class="c-btn c-btn--primary">
@@ -38,12 +38,14 @@
               <span class="c-terminal__command">ng serve --open</span>
             </div>
             <div class="c-terminal__output">
-              @for (skill of skills; track skill.name) {
-                <div class="c-terminal__skill">
-                  {{ skill.name }} 
-                  <span class="c-terminal__skill-bar">
-                    <span class="c-terminal__skill-fill" [style.width.%]="skill.level"></span>
-                  </span>
+              @for (skillGroup of skills; track skillGroup.category) {
+                <div class="c-terminal__skill" style="margin-bottom: 1rem; display: block;">
+                  <span style="color: var(--color-primary); font-weight: bold; display: block; margin-bottom: 0.3rem;">[{{ skillGroup.category }}]</span>
+                  <div style="padding-left: 1rem; color: #a8b2d1;">
+                    @for (item of skillGroup.items; track item) {
+                      <span style="display: inline-block; margin-right: 0.8rem;">> {{ item }}</span>
+                    }
+                  </div>
                 </div>
               }
             </div>
