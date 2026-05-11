@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   }
 
   private calculateCodingDays() {
-    const codingStartDate = new Date(2024, 11, 1); // December is 11 (0-indexed)
+    const codingStartDate = new Date(2025, 11, 1); // December is 11 (0-indexed)
     const today = new Date();
     const diff = today.getTime() - codingStartDate.getTime();
     this.codingDays = Math.floor(diff / (1000 * 3600 * 24));
