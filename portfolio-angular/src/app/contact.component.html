@@ -1,46 +1,60 @@
-  <section id="contact" class="c-contact o-section scroll-reveal" [class.revealed]="true">
-    <div class="c-contact__container o-container">
-      <h2 class="c-section-title">
-        <span class="c-section-title__number">04</span>CONTATTAMI
-      </h2>
-      <div class="c-contact__content" style="grid-template-columns: 1fr;">
-        <div class="c-contact__info" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-          <h3>Parliamone</h3>
-          <p>Sono disponibile per opportunità junior, stage, collaborazioni e progetti formativi.</p>
-          <div class="c-contact__details" style="display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
-            <div class="c-contact__item">
-              <i class="fas fa-envelope c-contact__item-icon"></i>
-              <a href="mailto:zagariafabio1999@gmail.com" style="color: inherit; text-decoration: none;">zagariafabio1999@gmail.com</a>
-              <i class="fas fa-envelope c-contact__item-icon"></i>
-              <a href="mailto:fabiozagaria@proton.me" style="color: inherit; text-decoration: none;">fabiozagaria@proton.me</a>
-            </div>
-            <div class="c-contact__item">
-              <i class="fab fa-github c-contact__item-icon"></i>
-              <a href="https://github.com/fabiozagaria" target="_blank" style="color: inherit; text-decoration: none;">github.com/fabiozagaria</a>
-            </div>
-            <div class="c-contact__item">
-              <i class="fab fa-linkedin c-contact__item-icon"></i>
-              <a href="https://linkedin.com/in/fabiozagaria" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn</a>
-            </div>
-            <div class="c-contact__item">
-              <i class="fas fa-globe c-contact__item-icon"></i>
-              <a href="https://fabio-zagaria-portfolio.vercel.app/" target="_blank" style="color: inherit; text-decoration: none;">fabio-zagaria-portfolio.vercel.app</a>
-            </div>
-            <div class="c-contact__item">
-              <i class="fas fa-globe c-contact__item-icon"></i>
-              <a href="https://www.instagram.com/zagariafabio.dev" target="_blank" style="color: inherit; text-decoration: none;">Instagram: zagariafabio.dev</a>
-            </div>
-            <div class="c-contact__item">
-              <i class="fas fa-globe c-contact__item-icon"></i>
-              <a href="https://x.com/fabiozagariadev" target="_blank" style="color: inherit; text-decoration: none;">X: zagariafabiodev</a>
-            </div>
-            <div class="c-contact__item">
-              <i class="fas fa-globe c-contact__item-icon"></i>
-              <a href="/public/cv-zagaria-fabio-1999.pdf" target="_blank" style="color: inherit;">Guarda CV</a>
-              <a href="/public/cv-zagaria-fabio-1999.pdf"  style="color: inherit;" download>Scarica CV</a>
+<section id="contact" class="c-contact o-section scroll-reveal" [class.revealed]="true">
+  <div class="c-contact__container o-container">
+    <h2 class="c-section-title">
+      <span class="c-section-title__number">04</span>CONTATTAMI
+    </h2>
+
+    <div class="c-contact__content c-contact__content--single">
+      <div class="c-contact__info">
+        <h3>Parliamone</h3>
+        <p>Sono disponibile per opportunita junior, stage, collaborazioni e progetti formativi.</p>
+
+        <div class="c-contact__details">
+          <div class="c-contact__item">
+            <i class="fas fa-envelope c-contact__item-icon"></i>
+            <div class="c-contact__links">
+              <a href="mailto:zagariafabio1999@gmail.com">zagariafabio1999@gmail.com</a>
+              <a href="mailto:fabiozagaria@proton.me">fabiozagaria@proton.me</a>
             </div>
           </div>
+
+          <div class="c-contact__item">
+            <i class="fab fa-github c-contact__item-icon"></i>
+            <a href="https://github.com/fabiozagaria" target="_blank" rel="noopener noreferrer">github.com/fabiozagaria</a>
+          </div>
+
+          <div class="c-contact__item">
+            <i class="fab fa-linkedin c-contact__item-icon"></i>
+            <a href="https://linkedin.com/in/fabiozagaria" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+
+          <div class="c-contact__item">
+            <i class="fas fa-globe c-contact__item-icon"></i>
+            <a href="https://fabio-zagaria-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">fabio-zagaria-portfolio.vercel.app</a>
+          </div>
+
+          <div class="c-contact__item">
+            <i class="fab fa-instagram c-contact__item-icon"></i>
+            <a href="https://www.instagram.com/zagariafabio.dev" target="_blank" rel="noopener noreferrer">Instagram: zagariafabio.dev</a>
+          </div>
+
+          <div class="c-contact__item">
+            <i class="fab fa-x-twitter c-contact__item-icon"></i>
+            <a href="https://x.com/fabiozagariadev" target="_blank" rel="noopener noreferrer">X: fabiozagariadev</a>
+          </div>
+        </div>
+
+        <div class="c-contact__cv-actions" aria-label="Azioni curriculum">
+          <a class="c-btn c-btn--primary" href="/cv-zagaria-fabio-1999.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-eye"></i>
+            Guarda CV
+          </a>
+          <a class="c-btn c-btn--secondary" href="/cv-zagaria-fabio-1999.pdf" download="cv-zagaria-fabio-1999.pdf" (click)="downloadCv($event)">
+            <i class="fas fa-download"></i>
+            Scarica CV
+          </a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
