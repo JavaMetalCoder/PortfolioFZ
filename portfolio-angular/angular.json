@@ -22,12 +22,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/app/img",
-                "output": "/app/img"
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [

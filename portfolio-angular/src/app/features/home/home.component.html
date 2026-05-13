@@ -6,7 +6,7 @@
     <div class="c-hero__content o-container">
       <div class="c-hero__text">
         <div class="c-hero__logo-wrapper">
-          <img src="app/img/logo.png" alt="Fabio Zagaria Logo" class="c-hero__logo-img">
+          <img src="assets/img/logo.png" alt="Fabio Zagaria Logo" class="c-hero__logo-img">
         </div>
         <p class="c-hero__subtitle" style="font-size: 2rem; margin-bottom: 0.5rem;">PROGRAMMAZIONE E INFORMATICA</p>
         <p class="c-hero__description" style="max-width: 600px; text-align: left; line-height: 1.6;">
@@ -40,8 +40,8 @@
             <div class="c-terminal__output">
               @for (skillGroup of skills; track skillGroup.category) {
                 <div class="c-terminal__skill" style="margin-bottom: 1rem; display: block;">
-                  <span style="color: var(--color-primary); font-weight: bold; display: block; margin-bottom: 0.3rem;">[{{ skillGroup.category }}]</span>
-                  <div style="padding-left: 1rem; color: #a8b2d1;">
+                  <span style="color: var(--clr-cyber-green); font-weight: bold; display: block; margin-bottom: 0.3rem;">[{{ skillGroup.category }}]</span>
+                  <div style="padding-left: 1rem; color: var(--clr-white-subtle);">
                     @for (item of skillGroup.items; track item) {
                       <span style="display: inline-block; margin-right: 0.8rem;">> {{ item }}</span>
                     }

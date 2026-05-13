@@ -8,8 +8,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contact.component.html'
 })
 export class ContactComponent {
-  private readonly cvPath = '/cv-zagaria-fabio-1999.pdf';
-  private readonly cvFilename = 'cv-zagaria-fabio-1999.pdf';
+  private readonly cvPath = '/assets/documents/CV.pdf';
+  private readonly cvFilename = 'CV.pdf';
 
   downloadCv(event: MouseEvent): void {
     event.preventDefault();
