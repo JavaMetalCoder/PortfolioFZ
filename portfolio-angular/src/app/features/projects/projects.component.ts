@@ -52,7 +52,7 @@ export class ProjectsComponent {
       technologies: ['Angular', 'Bootstrap'],
       learning: 'Organizzazione dei dati, gestione delle operazioni CRUD e logica applicativa orientata all\'utente.',
       status: 'In sviluppo',
-      liveLink: '',
+      liveLink: 'https://gestionale-spese.vercel.app/',
       githubLink: 'https://github.com/fabiozagaria/gestionale-spese'
     }
   ];
