@@ -28,7 +28,7 @@ export class ProjectsComponent {
       technologies: ['HTML', 'CSS', 'JS'],
       learning: 'Gestione dello stato in Vanilla JS, layout complessi, organizzazione del CSS.',
       status: 'Esercizio didattico',
-      liveLink: '',
+      liveLink: 'https://fakeflix-lemon-six.vercel.app/',
       githubLink: 'https://github.com/JavaMetalCoder/Fakeflix'
     },
     {
